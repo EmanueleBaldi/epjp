@@ -2,17 +2,19 @@ package b04.s38;
 
 public class IfElseIfElse {
     public static void main(String[] args) {
-        boolean condition = false;
-        boolean otherCondition = true;
-
-        if (condition) {
-            System.out.println("only if condition is true");
-        } else if (otherCondition) {
-            System.out.println("only if condition is false and otherCondition is true");
+        int value = 0 ;
+        
+        if (value < 0) {
+            System.out.println("negativo");
+        } else if (value > 0 && value < 100) {
+            { if (value % 2 == 0)
+            	System.out.println("piccolo pari");
+            else {
+            	System.out.println("piccolo dispari");
+            }
+            }
         } else {
-            System.out.println("condition and otherCondition are both false");
+            System.out.println("grande");
         }
-
-        System.out.println("always printed");
     }
 }
