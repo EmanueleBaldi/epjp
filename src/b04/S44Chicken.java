@@ -44,5 +44,18 @@ public class S44Chicken {
 				// di come stampare a video nella classe S44Main
 	public String toString() {
 		return "S44Chicken [name=" + name + ", weight=" + weight + ", female=" + female + "]";
+
+/*
+		String result; // = "[" + name + "," + weight + "," + female + "]";
+
+		result = String.format("%s, %.2f, %b", name, weight, female); // i primi tre parametri servono per specificare
+																		// il "template" dei parametri successivi (es
+																		// %s->string, %f->float, ecc.) i successivi
+																		// parametri sono il nome appunto dei formati
+																		// specificati. il .2 rappresenta il numero dei
+																		// decimali che voglio
+
+		return result;
+*/	
 	}
 }

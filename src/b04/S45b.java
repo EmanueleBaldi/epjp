@@ -58,6 +58,22 @@ public class S45b {
 															// stringa SPLITTATA da rimettere insieme
 		//19
 		System.out.println("19) " + String.valueOf(a)); //restituisce il valore di una stringa
+		
+/* String.format (vedi S44Chicken)		
+		public String toString() {
+
+		String result; // = "[" + name + "," + weight + "," + female + "]";
+
+			result = String.format("%s, %.2f, %b", name, weight, female); // i primi tre parametri servono per specificare
+																			// il "template" dei parametri successivi (es
+																			// %s->string, %f->float, ecc.) i successivi
+																			// parametri sono il nome appunto dei formati
+																			// specificati. il .2 rappresenta il numero dei
+																			// decimali che voglio
+
+			return result;
+		}
+*/	
 	}
 
 }
