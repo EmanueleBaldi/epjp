@@ -7,6 +7,9 @@ package b04;
 //CON StringBuilder sb = new StringBuilder(10) creo un oggetto StringBuilder di dimensione 10
 //CON StringBuilder sb = new StringBuilder() creo un oggetto StringBuilder di dimensione 16 per default
 
+//I METODI CON VOID NON RITORNANO NIENTE PER QUESTO è NECESSARIO RICHIAMARLI AL DI FUORI DELLA println E PER FAR 
+//RITORNARE QUALCOSA è NECESSARIO INSERIRE SUCCESSIVAMENTE NELLA println LA references (vedi S46)
+
 public class S46b {
 
 	public static void main(String[] args) {
