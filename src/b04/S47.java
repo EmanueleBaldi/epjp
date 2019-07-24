@@ -1,5 +1,7 @@
 package b04;
 
+//LA CLASSE MATH è UNA CLASSE PER LA QUALE NON ESISTE UN OGGETTO E QUINDI TUTTI I METODI SONO STATICI
+
 public class S47 {
     public static void main(String[] args) {
         System.out.println("E is " + Math.E);
