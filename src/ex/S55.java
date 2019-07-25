@@ -9,8 +9,8 @@ public class S55 {
      * @return the sum of all the numbers, or zero
      */
     public static long sum(int first, int last) {
-        // TODO
-        return 0;
+        long sum = (first + last);
+        return sum;
     }
 
     /**
