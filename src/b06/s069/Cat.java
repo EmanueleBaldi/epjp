@@ -1,7 +1,7 @@
 package b06.s069;
 
 public class Cat extends Mammal {
-    private Tail tail;
+    private Tail tail; // esempio di aggregazione
 
     public Cat(int gestationDays, int tailLen) {
         super(gestationDays);

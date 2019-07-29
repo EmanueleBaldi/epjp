@@ -2,13 +2,15 @@ package b04.s40;
 
 public class ForEach2 {
 	public static void main(String[] args) {
-		String[] array = new String[5];
-		for (int i = 0; i < array.length; i++) {
-			array[i] = "";
+
+		int k = 5;
+		int[] values = { 7, 5, 11 };
+		for (int value : values) {
+			value += k;
 		}
-		for (String item : array) {
-			System.out.println(item.length());
+		for (int value :values) {
+			System.out.println(value + " ");	
 		}
-		System.out.println(">" + array[2] + "<");
+		
 	}
 }
