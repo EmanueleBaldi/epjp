@@ -96,7 +96,31 @@ public class S54 {
 			return 'F';
 		}
 	}
-
+	
+	/******************************************************************
+	 * **************************************************************** 
+	 * INTRODUZIONE DELLE ECCEZIONI NEL METODO vote --> voteEx
+	 ******************************************************************
+	 ******************************************************************/
+	public static char voteEx(double percentile) throws Exception {
+		if (percentile < 0 || percentile > 100) {
+			throw new Exception ("percentile should be between 0 and 100"); 
+		}
+		if (percentile > 90) {
+			return 'A';
+		} else if (percentile > 80 && percentile <= 90) {
+			return 'B';
+		} else if (percentile > 70 && percentile <= 80) {
+			return 'C';
+		} else if (percentile > 60 && percentile <= 70) {
+			return 'D';
+		} else if (percentile > 50 && percentile <= 60) {
+			return 'E';
+		} else {
+			return 'F';
+		}
+	}
+	
 	/**
 	 * Leap year checker
 	 * 

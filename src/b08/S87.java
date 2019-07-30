@@ -8,7 +8,7 @@ public class S87 {
         double result = 0;
 
         Scanner scanner = new Scanner(System.in);
-        while (scanner.hasNext()) {
+        while (scanner.hasNext()) { // per concludere il ciclo premere Ctrl+z perchè altrimenti continua all'infinito
             if (scanner.hasNextDouble()) {
                 result += scanner.nextDouble();
             } else {

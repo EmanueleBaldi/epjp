@@ -22,6 +22,29 @@ public class S55 {
 		}
 	}
 
+	/******************************************************************
+	 ***************************************************************** 
+	 * INTRODUZIONE DELLE ECCEZIONI NEL METODO sum --> sumEx
+	 ******************************************************************
+	 *****************************************************************/
+	public static long sumEx(int first, int last) throws Exception {
+
+		if (last < first) {
+			throw new Exception("first should be smaller than last");
+		}
+		long somma = 0;
+		if (first > 0 && first < last) {
+			for (int i = first; i <= last; i++) {
+				somma = somma + i;
+			}
+			return somma;
+		} else if (first < 0) {
+			return 0;
+		} else {
+			return first;
+		}
+	}
+
 	/**
 	 * Add up only the even numbers in the passed closed interval
 	 * 
@@ -55,6 +78,29 @@ public class S55 {
 	 */
 	public static long factorial(int value) {
 		if (value < 0 || value > 20) {
+			return 0;
+		} else if (value < 2) {
+			return 1;
+		}
+
+		long fattoriale = value;
+
+		for (int i = value - 1; i > 0; i--) {
+			fattoriale = fattoriale * i;
+		}
+		return fattoriale;
+	}
+
+	/******************************************************************
+	 * **************************************************************** 
+	 * INTRODUZIONE DELLE ECCEZIONI NEL METODO factorial --> factorialEx
+	 ******************************************************************
+	 ******************************************************************/
+	public static long factorialEx(int value) throws Exception {
+		if (value < 0) {
+			throw new Exception("value should be positive");
+		}
+		if (value > 20) {
 			return 0;
 		} else if (value < 2) {
 			return 1;
