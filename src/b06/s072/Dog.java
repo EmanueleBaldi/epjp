@@ -12,9 +12,10 @@ public class Dog extends Pet {
 		this.speed = speed;
 	}
 
-	public double getSpeed() { // il getSpeed permette di avere accesso ad una variabile nella classe Main che
-								// altrimenti non sarebbe accedibile in quanto private. infatti in questo caso
-								// speed è private, e quindi è necessario fare il getSpeed (SI FA DA SOURCE !!!!!!! )
+	public double getSpeed() { // il getSpeed permette di dare l'accesso ad una variabile in un'altra classe
+								// che altrimenti non sarebbe accedibile in quanto private. infatti in questo caso
+								// speed è private, e quindi è necessario fare il getSpeed per poterla rendere
+								// accessibile alla classe Main (SI FA DA SOURCE !!!!!!! )
 		return speed;
 	}
 
