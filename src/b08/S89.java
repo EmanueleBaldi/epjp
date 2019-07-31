@@ -5,6 +5,10 @@ import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+class xxx {
+	
+}
+
 public class S89 {
     public static void someLog() {
         Logger log = Logger.getLogger("sample");
