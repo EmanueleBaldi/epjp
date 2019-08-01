@@ -2,7 +2,7 @@ package b10;
 
 public class S111 {
     public static void main(String[] args) {
-        Runnable runnable = new Runner();
+        Runnable runnable = new Runner(); //creami un oggeto runnable di tipo runner
 
         Thread[] threads = { new Thread(runnable), new MyThread() };
         for (Thread t : threads) {
