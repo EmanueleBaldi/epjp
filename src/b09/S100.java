@@ -12,7 +12,7 @@ public class S100 {
 		System.out.println("contains key 12: " + map.containsKey(12));
 		System.out.println("contains value seven: " + map.containsValue("seven"));
 
-		Set<Map.Entry<Integer, String>> items = map.entrySet(); // items è un set di mapEntri di interi e stringhe
+		Set<Map.Entry<Integer, String>> items = map.entrySet(); // items è un set di mapEntry di interi e stringhe
 		for (Map.Entry<Integer, String> item : items) {
 			item.setValue(item.getValue() + "!"); // cambia il valore di item e aggiungigli !
 		}

@@ -17,4 +17,8 @@ public abstract class Person {
 	public int getEnergy() {
 		return energy;
 	}
+	
+	public void changeEnergy(int delta) {
+		this.energy += delta;
+	}
 }
