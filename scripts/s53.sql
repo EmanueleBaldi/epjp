@@ -20,3 +20,14 @@ FROM employees e;
 
 SELECT (max(e.salary) - min(e.salary)) AS "max - min salary"
 FROM employees e;
+
+SELECT (max(e.salary) - min(e.salary)) AS "max - min salary"
+FROM employees e
+GROUP BY e.job_id
+HAVING (max(e.salary) - min(e.salary))>0;
+
+SELECT (min(e.salary)) AS "min salary"
+FROM employees e
+WHERE e.manager_id IS NOT null
+GROUP BY e.manager_id
+HAVING min(e.salary)>0;
