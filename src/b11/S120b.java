@@ -9,14 +9,14 @@ import java.util.List;
 
 import oracle.jdbc.pool.OracleDataSource;
 
-public class S120 {
+public class S120b {
     private static final String URL = "jdbc:oracle:thin:@localhost:1521/xe";
     private static final String USER = "me";
     private static final String PASSWORD = "password";
 
     private OracleDataSource ods;
 
-    public S120() throws SQLException {
+    public S120b() throws SQLException {
         ods = new OracleDataSource();
 
         ods.setURL(URL);
@@ -32,9 +32,9 @@ public class S120 {
             List<Coder> results = new ArrayList<>();
             while (rs.next()) {
             	Coder coder = new Coder ();
-            	coder.firstName = rs.getString(2);
-            	coder.lastName = rs.getString(3);
-            	coder.salary = rs.getInt(5);
+            	coder.firstName = rs.getString(1);
+            	coder.lastName = rs.getString(2);
+            	coder.salary = rs.getInt(3);
                 results.add(coder);
             }
             return results;
