@@ -31,7 +31,21 @@ public class S120b {
 
 			List<Coder> results = new ArrayList<>();
 			while (rs.next()) {
-				results.add (new Coder(rs.getString(1), rs.getString(2), rs.getInt(3)));
+				results.add(new Coder(rs.getString(1), rs.getString(2), rs.getInt(3)));
+			}
+			return results;
+		}
+	}
+
+	public List<Coder> getCodersBySalary(double lower) throws SQLException {
+		try (Connection conn = ods.getConnection(); //
+				Statement stmt = conn.createStatement()) {
+			String query = "SELECT first_name, last_name, salary FROM coders WHERE salary >= " + lower + " ORDER BY 3 DESC";
+			ResultSet rs = stmt.executeQuery(query);
+
+			List<Coder> results = new ArrayList<>();
+			while (rs.next()) {
+				results.add(new Coder(rs.getString(1), rs.getString(2), rs.getInt(3)));
 			}
 			return results;
 		}
@@ -41,8 +55,10 @@ public class S120b {
 		try {
 			S120b sample = new S120b();
 			List<Coder> coders = sample.getCoders();
-
 			System.out.println("Coder names are: " + coders);
+
+			coders = sample.getCodersBySalary(6000);
+			System.out.println("Rich coders are: " + coders);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return;
@@ -55,17 +71,17 @@ class Coder {
 	private String firstName;
 	private String lastName;
 	private int salary;
-	
-	public Coder () {
-		
+
+	public Coder() {
+
 	}
-	
+
 	public Coder(String firstName, String lastName, int salary) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.salary = salary;
 	}
-	
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -81,8 +97,6 @@ class Coder {
 	public String getFirstName() {
 		return firstName;
 	}
-
-
 
 	public String getLastName() {
 		return lastName;
