@@ -19,9 +19,9 @@ END;
 
 -- PROCEDURA 2) --
 CREATE OR REPLACE PROCEDURE get_day_after(
-p_name in VARCHAR2(20),
 p_tomorrow out DATE) IS
 BEGIN
+
 p_tomorrow := sysdate + 1;
 END get_day_after;
 /
